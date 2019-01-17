@@ -1,0 +1,16 @@
+syntax = "proto3";
+
+service AccountService {
+    rpc Create(Account) returns (Empty) {}
+}
+
+message Empty {}
+
+message Account {
+    string number = 1;
+    string name = 2;
+}
+
+message AccountList {
+    repeated Account accounts = 1;
+}
